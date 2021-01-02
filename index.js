@@ -100,7 +100,7 @@ function createCard(data) {
   let divCol1 = document.createElement('div'); // Scuffed
   divCol1.classList.add("col-md-6"); // Scuffed
   divCol1.innerHTML = `
-    <div class="card mb-4" style="max-width: 500px;">
+    <div class="card text-white bg-dark mb-4" style="max-width: 500px;">
       <div class="row no-gutters">
         <div class="col-md-3"><img
             src="${imgLink}"
