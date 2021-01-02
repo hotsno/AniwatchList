@@ -61,16 +61,22 @@ function callAPI() {
   // AniList API
   fetch(url, options).then(handleResponse => handleResponse.json())
     .then(handleData => {
-      let watching = handleData["data"]["Page"]["mediaList"];
-      for (var i = 0; i < watching.length; i++) {
-        createCard(watching[i]);
+      // If user doesn't exist, create HTML with message + reload button
+      if (handleData["data"]["Page"] === null) {
+        invalidUser();
       }
-
-      // Needed for tooltips to work ¯\_(ツ)_/¯
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
+      // Otherwise, create cards
+      else {
+        let watching = handleData["data"]["Page"]["mediaList"]; // MediaList of anime being watched by user
+        for (var i = 0; i < watching.length; i++) {
+          createCard(watching[i]); // Creates HTML for 1 anime card
+        }
+        // Needed for tooltips to work apparently ¯\_(ツ)_/¯
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+      }
     })
     .catch(handleError => console.log(handleError));
 
@@ -89,11 +95,11 @@ function createCard(data) {
   let link = "https://aniwatch.me/anime/" + idList[anilistId] + "/" + currentEpisode;
   let imgLink = data["media"]["coverImage"]["extraLarge"];
   let airing = false;
-  if(data["media"]["status"] === "RELEASING") {
+  if (data["media"]["status"] === "RELEASING") {
     airing = true;
   }
   let airingString = "Currently airing"
-  if(!airing) {
+  if (!airing) {
     airingString = "Finished airing"
   }
 
@@ -116,4 +122,29 @@ function createCard(data) {
     </div>` // Need to rewrite this HTML
 
   document.getElementById("bruh").appendChild(divCol1); // Scuffed
+}
+
+// Creates HTML shown when invalid user
+function invalidUser() {
+  let div = document.createElement('div'); // Scuffed
+  div.innerHTML = `
+  <div class="container text-center">
+    <h3 class="text-light">User not found</h3>
+  </div>
+  <div class="container" id="reload">
+    <div class="row">
+      <div class="col text-center" style="margin: auto; padding-bottom: 20px;">
+        <button class="btn btn-primary button">Reload</button>
+      </div>
+    </div>
+  </div>` // Need to rewrite this HTML
+
+  document.getElementById("scuffed").appendChild(div); // Scuffed
+
+  const refreshButton = document.querySelector('.button');
+  const refreshButtonClicked = () => {
+    window.location.reload();
+  }
+
+  refreshButton.addEventListener('click', refreshButtonClicked);
 }
