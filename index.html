@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gets your &quot;Watching&quot; list from AniList and then creates links to the next episode on Aniwatch.me">
+  <meta name="description"
+    content="Gets your &quot;Watching&quot; list from AniList and then creates links to the next episode on Aniwatch.me">
   <title>AniwatchList</title>
-  <link rel="icon" href="https://media.discordapp.net/attachments/751582535540015164/801638594083028992/AniWatchList.png">
+  <link rel="icon"
+    href="https://media.discordapp.net/attachments/751582535540015164/801638594083028992/AniWatchList.png">
 
   <!-- Bootstrap shiz -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,38 +20,41 @@
 
 
 <body style="background-color: #232533;">
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark" style="margin-bottom:20px;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="https://aniwatchlist.me/">
-        <img src="https://media.discordapp.net/attachments/751582535540015164/801638594083028992/AniWatchList.png" alt="Logo" width="32" height="32"
-          class="d-inline-block align-top">
-        AniwatchList
-      </a>
-    </div>
-  </nav>
+  <div id="page-container">
+    <div id="content-wrap">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark bg-dark" style="margin-bottom:20px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://aniwatchlist.me/">
+            <img src="https://media.discordapp.net/attachments/751582535540015164/801638594083028992/AniWatchList.png"
+              alt="Logo" width="32" height="32" class="d-inline-block align-top">
+            AniwatchList
+          </a>
+        </div>
+      </nav>
 
-  <!-- Input and button (scuffed code, need to fix) -->
-  <div id="input-button">
-    <div class="container" id="form">
-      <div class="center col-sm-2">
-        <input class="form-control storage" id="ex1" type="text" style="margin: 10px;" placeholder="AniList Username">
-      </div>
-    </div>
-    <div class="container" id="submit">
-      <div class="row">
-        <div class="col text-center" style="margin: auto; padding-bottom: 20px;">
-          <button class="btn btn-primary button">Submit</button>
+      <!-- Input and button (scuffed code, need to fix) -->
+      <div id="input-button">
+        <div class="container" id="form">
+          <div class="center col-sm-2">
+            <input class="form-control storage" id="ex1" type="text" style="margin: 10px;"
+              placeholder="AniList Username">
+          </div>
+        </div>
+        <div class="container" id="submit">
+          <div class="row">
+            <div class="col text-center" style="margin: auto; padding-bottom: 20px;">
+              <button class="btn btn-primary button">Submit</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="scuffed">
-    
-  </div>
+      <div id="scuffed">
 
-  <!-- <div class="container text-center">
+      </div>
+
+      <!-- <div class="container text-center">
     <h3 class="text-light">User not found</h3>
   </div>
   <div class="container" id="reload">
@@ -60,22 +65,51 @@
     </div>
   </div> -->
 
-  <!-- Container for the anime cards -->
-  <div class="container">
-    <div class="row" id="bruh">
+      <!-- Container for the anime cards -->
+      <div class="container">
+        <div class="row" id="bruh">
 
+        </div>
+      </div>
     </div>
+    <footer id="footer" class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted">© 2020-2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="color: white;">About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="https://duckduckgo.com/?q=how+to+use+aniwatchlist">How to use?</a></li>
+            <li><a class="link-secondary" href="https://github.com/hotsno">About AniwatchList</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="color: white;">Social Media </h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="https://discord.gg/Kj3h2hcKdb">Discord</a></li>
+            <li><a class="link-secondary" href="https://twitter.com/elonmusk">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="color: white;">Contact Us</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="mailto:yourmom@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+    <!-- Bootstrap shiz -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"></script>
   </div>
-
-  <script src="index.js"></script>
-
-  <!-- Bootstrap shiz -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
