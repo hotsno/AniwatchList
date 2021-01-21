@@ -1,4 +1,6 @@
 # AniwatchList
+## Link
+[AniwatchList](https://aniwatchlist.me)
 ## About
 Gets your [AniList](https://anilist.co) "Watching" list and displays each item with a button linking to the next episode on [Aniwatch](https://aniwatch.me).
 ## Use
