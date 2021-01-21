@@ -115,7 +115,7 @@ function createCard(data) {
           <div class="card-body">
             <h5 class="card-title">${title}</h5>
             <p class="card-text">${airingString}</p>
-            <a type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Play episode ${currentEpisode}" href="${link}" rel="noreferrer">Next Episode</a>
+            <a type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Play episode ${currentEpisode}" href="${link}" rel="noreferrer" target="_blank">Next Episode</a>
           </div>
         </div>
       </div>
