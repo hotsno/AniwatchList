@@ -2,7 +2,7 @@
 ## Link
 [AniwatchList](https://aniwatchlist.me)
 ## About
-Gets your [AniList](https://anilist.co) "Watching" list and displays each item with a button linking to the next episode on [Aniwatch](https://aniwatch.me).
+Gets your [AniList](https://anilist.co) "Watching" list and displays each item with a button linking to the next episode on [Aniwatch](https://aniwatch.me) (at the time of writing Aniwatch is closed for registration).
 ## Use
 Recommended to use along with [MAL-Sync](https://chrome.google.com/webstore/detail/mal-sync/kekjfbackdeiabghhcdklcdoekaanoel?hl=en).
 ## Bugs, help, and suggestions
