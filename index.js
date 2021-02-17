@@ -16,6 +16,7 @@ const buttonClicked = () => {
   localStorage.setItem('username', text);
   variables.userName = text;
   document.getElementById("input-button").remove();
+  document.title = "AniwatchList - " + text + "'s Watchlist"
   callAPI();
 }
 
