@@ -1,4 +1,5 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ff15dd6b-b4e4-4ae1-a74f-de30cdce5821/deploy-status)](https://app.netlify.com/sites/heuristic-bartik-b6a5db/deploys)
+# RIP Aniwatch :(
+
 # AniwatchList
 https://aniwatchlist.me
 ## About
